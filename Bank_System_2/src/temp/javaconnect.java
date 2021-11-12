@@ -19,7 +19,7 @@ public class javaconnect {
     public static Connection ConnecrDb(){
         try{
             Class.forName("org.sqlite.JDBC");
-            Connection conn=DriverManager.getConnection("jdbc:sqlite:D:\\Bank_System_2\\bankx.sqlite");
+            Connection conn=DriverManager.getConnection("jdbc:sqlite:C:\\OOM_Project_Final\\Bank_System_2\\bankx.sqlite");
             return conn;
         }catch(Exception e) {
             JOptionPane.showMessageDialog(null, e);
