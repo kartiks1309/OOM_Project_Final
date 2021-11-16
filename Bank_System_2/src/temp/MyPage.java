@@ -23,7 +23,7 @@ PreparedStatement pst;
      */
     public MyPage(String x) {
         initComponents();
-        conn=javaconnect.ConnecrDb();
+        conn=javaconnect.ConnectDb();
         Calender();
         
         jTextField1.setText(x);

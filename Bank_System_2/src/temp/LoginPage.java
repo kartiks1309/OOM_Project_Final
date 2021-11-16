@@ -23,7 +23,7 @@ PreparedStatement pst;
      */
     public LoginPage() {
         initComponents();
-        conn=javaconnect.ConnecrDb();
+        conn=javaconnect.ConnectDb();
     }
 
     /**
@@ -115,6 +115,7 @@ PreparedStatement pst;
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/temp/fina_bank.png"))); // NOI18N
 
+        jTextField3.setEditable(false);
         jTextField3.setBackground(new java.awt.Color(220, 20, 60));
         jTextField3.setFont(new java.awt.Font("Copperplate Gothic Bold", 1, 18)); // NOI18N
         jTextField3.setForeground(new java.awt.Color(255, 255, 255));
@@ -263,6 +264,7 @@ PreparedStatement pst;
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 168, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
+        jTextField2.setEditable(false);
         jTextField2.setFont(new java.awt.Font("Gill Sans Ultra Bold", 0, 16)); // NOI18N
         jTextField2.setForeground(new java.awt.Color(220, 20, 60));
         jTextField2.setText("GOLIATH NATIONAL BANK");

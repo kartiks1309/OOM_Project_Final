@@ -16,7 +16,7 @@ public class javaconnect {
     
     Connection conn=null;
     
-    public static Connection ConnecrDb(){
+    public static Connection ConnectDb(){
         try{
             Class.forName("org.sqlite.JDBC");
             Connection conn=DriverManager.getConnection("jdbc:sqlite:C:\\OOM_Project_Final\\Bank_System_2\\bankx.sqlite");

@@ -25,7 +25,7 @@ PreparedStatement pst;
      */
     public NewAccount() {
         initComponents();
-        conn=javaconnect.ConnecrDb();
+        conn=javaconnect.ConnectDb();
         
         RandomAcc();
         RandomMICR();
