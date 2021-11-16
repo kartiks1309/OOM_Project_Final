@@ -24,7 +24,7 @@ PreparedStatement pst;
     public MyPage(String x) {
         initComponents();
         conn=javaconnect.ConnectDb();
-        Calender();
+        Calender1();
         
         jTextField1.setText(x);
         jTextField13.setText(x);
@@ -39,7 +39,7 @@ PreparedStatement pst;
     
     
     
-    public void Calender(){
+    public void Calender1(){
         Calendar cal=new GregorianCalendar();
         int mm=cal.get(Calendar.MONTH);
         int yy=cal.get(Calendar.YEAR);
