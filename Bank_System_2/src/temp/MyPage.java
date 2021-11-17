@@ -1126,6 +1126,9 @@ PreparedStatement pst;
             setVisible(false);
             LoginPage ob=new LoginPage();
             ob.setVisible(true);
+            
+            rs.close();
+            pst.close();
 
         }catch(Exception e){
             JOptionPane.showMessageDialog(null, e);
@@ -1199,6 +1202,9 @@ PreparedStatement pst;
 
                     jPasswordField1.setText("");
                     jPasswordField2.setText("");
+                    
+                    rs.close();
+                    pst.close();
 
                 }
                 else{
@@ -1259,6 +1265,14 @@ PreparedStatement pst;
 
             }catch(Exception e){
                 JOptionPane.showMessageDialog(null, e);
+            }finally{
+                try{
+                    rs.close();
+                    pst.close();
+                    
+                }catch(Exception e){
+                    
+                }
             }
         }
         else{
@@ -1409,6 +1423,9 @@ PreparedStatement pst;
             jTextField16.setText("");
             jTextField17.setText("");
             jTextField18.setText("");
+            
+            rs.close();
+            pst.close();
 
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e);
@@ -1585,10 +1602,19 @@ PreparedStatement pst;
             
             String a1=rs.getString("Balance");
             jTextField34.setText(a1);
+            rs.close();
+            pst.close();
             
             
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e);
+        }finally{
+            try{
+                rs.close();
+                pst.close();
+            }catch(Exception e){
+                
+            }
         }
     }//GEN-LAST:event_jButton15ActionPerformed
 
