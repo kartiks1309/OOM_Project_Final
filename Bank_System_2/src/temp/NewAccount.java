@@ -372,7 +372,7 @@ PreparedStatement pst;
     }
     
     public void Bal(){
-        String sql="insert into Balances(Name,Acc,MICR,Balance)values (?,?,?,?)";
+        String sql="insert into Balances(Name,Acc,MICR,Balance,Debt)values (?,?,?,?,?)";
         
         try{
             pst=conn.prepareStatement(sql);
@@ -380,6 +380,7 @@ PreparedStatement pst;
             pst.setString(2,jTextField1.getText());
             pst.setString(3,jTextField2.getText());
             pst.setString(4,jTextField10.getText());
+            pst.setString(5,"0");        
             pst.execute();
         }catch(Exception e){
             JOptionPane.showMessageDialog(null,e);
@@ -431,7 +432,7 @@ PreparedStatement pst;
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
         
-        String sql="insert into Account(Acc,Name,DOB,Pin,AccType,Nationality,Religion,MICR,Gender,Mob,Address,SecQ,SecA,Balance)values (?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql="insert into Account(Acc,Name,DOB,Pin,AccType,Nationality,Religion,MICR,Gender,Mob,Address,SecQ,SecA,Balance,Debt)values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         try{
             pst=conn.prepareStatement(sql);
             pst.setString(1,jTextField1.getText());
@@ -453,6 +454,7 @@ PreparedStatement pst;
             pst.setString(12, (String) jComboBox3.getSelectedItem());
             pst.setString(13,jTextField9.getText());
             pst.setString(14,jTextField10.getText());
+            pst.setString(15,"0");
             pst.execute();
             
             
