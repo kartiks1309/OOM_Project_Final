@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 /**
  *
@@ -468,6 +469,7 @@ PreparedStatement pst;
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
+                //UIManager.setLookAndFeel("com.jtattoo.plaf.smart.SmartLookAndFeel");
             }
         } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(LoginPage.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
